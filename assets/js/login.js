@@ -1,27 +1,53 @@
-// Sample login functionality for the login page
+// Dummy user data (replace with actual data)
+const employees = [
+    { username: 'employee1', password: 'password1' },
+    { username: 'employee2', password: 'password2' },
+];
 
-// This function will be called when the login button is clicked
-function login() {
-    // Get the username and password input values
-    const username = document.getElementById('username').value;
-    const password = document.getElementById('password').value;
+const customers = [
+    { username: 'customer1', password: 'password1' },
+    { username: 'customer2', password: 'password2' },
+];
 
-    // You should implement logic here to validate the credentials
-    // and generate and store tokens securely
-
-    // For this example, let's assume a simple check for a valid username and password
-    if (username === 'employee' && password === 'password') {
-        alert('Login successful as an employee.');
-        // Redirect to the employee's page
-        window.location.href = 'manage_orders.html';
-    } else if (username === 'customer' && password === 'password') {
-        alert('Login successful as a customer.');
-        // Redirect to the customer's page
-        window.location.href = 'order_management.html';
-    } else {
-        alert('Invalid username or password. Please try again.');
-    }
+// Function to generate a secure token (replace with a secure token generation method)
+function generateToken(user) {
+    return btoa(`${user.username}:${user.password}`);
 }
 
-// Attach the login function to the login button's click event
-document.getElementById('login-button').addEventListener('click', login);
+document.getElementById('employee-login').addEventListener('click', () => {
+    document.getElementById('employee-login-form').style.display = 'block';
+    document.getElementById('customer-login-form').style.display = 'none';
+});
+
+document.getElementById('customer-login').addEventListener('click', () => {
+    document.getElementById('employee-login-form').style.display = 'none';
+    document.getElementById('customer-login-form').style.display = 'block';
+});
+
+document.getElementById('employee-submit').addEventListener('click', () => {
+    const username = document.getElementById('employee-username').value;
+    const password = document.getElementById('employee-password').value;
+
+    const user = employees.find((e) => e.username === username && e.password === password);
+
+    if (user) {
+        const token = generateToken(user);
+        alert(`Employee login successful. Token: ${token}`);
+    } else {
+        alert('Invalid credentials');
+    }
+});
+
+document.getElementById('customer-submit').addEventListener('click', () => {
+    const username = document.getElementById('customer-username').value;
+    const password = document.getElementById('customer-password').value;
+
+    const user = customers.find((e) => e.username === username && e.password === password);
+
+    if (user) {
+        const token = generateToken(user);
+        alert(`Customer login successful. Token: ${token}`);
+    } else {
+        alert('Invalid credentials');
+    }
+});
