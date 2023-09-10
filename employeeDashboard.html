@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/employeeDashboard.css">
+    <title>Employee Dashboard</title>
+</head>
+<body>
+    <div class="header">
+        <h1>Employee Dashboard</h1>
+    </div>
+
+    <div class="container">
+        <div class="employee-info">
+            <h2>Employee Information</h2>
+            <p>ID: <span id="employee-id">12345</span></p>
+            <p>Last Login: <span id="last-login">2023-09-10 09:30 AM</span></p>
+        </div>
+
+        <h2>Orders</h2>
+        <button id="view-orders" class="invoice-button">View Approved and Completed Orders</button>
+
+        <ul class="order-list" id="orders">
+            <!-- Orders will be dynamically added here using JavaScript -->
+        </ul>
+
+        <div class="invoice" id="invoice">
+            <!-- Invoice details will be displayed here using JavaScript -->
+        </div>
+
+        <a href="#">Create New Quote</a>
+        <a href="#">Import Products</a>
+    </div>
+
+    <script src="assets/js/employeeDashboard.js"></script>
+</body>
+</html>
