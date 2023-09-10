@@ -1,3 +1,18 @@
+// Function to show login form based on selected tab
+function showLoginForm(userType) {
+    document.getElementById('employee-login-form').style.display = userType === 'employee' ? 'block' : 'none';
+    document.getElementById('customer-login-form').style.display = userType === 'customer' ? 'block' : 'none';
+}
+
+// Event listeners for tab buttons
+document.getElementById('employee-tab').addEventListener('click', () => {
+    showLoginForm('employee');
+});
+
+document.getElementById('customer-tab').addEventListener('click', () => {
+    showLoginForm('customer');
+});
+
 // Dummy user data (replace with actual data)
 const employees = [
     { username: 'employee1', password: 'password1' },
@@ -11,19 +26,20 @@ const customers = [
 
 // Function to generate a secure token (replace with a secure token generation method)
 function generateToken(user) {
-    return btoa(`${user.username}:${user.password}`);
+    const currentTime = new Date();
+    const expirationTime = new Date(currentTime.getTime() + 10 * 60 * 1000); // 10 minutes from now
+
+    const tokenData = {
+        username: user.username,
+        expiration: expirationTime.getTime(),
+    };
+
+    const token = btoa(JSON.stringify(tokenData));
+    return token;
 }
 
-document.getElementById('employee-login').addEventListener('click', () => {
-    document.getElementById('employee-login-form').style.display = 'block';
-    document.getElementById('customer-login-form').style.display = 'none';
-});
 
-document.getElementById('customer-login').addEventListener('click', () => {
-    document.getElementById('employee-login-form').style.display = 'none';
-    document.getElementById('customer-login-form').style.display = 'block';
-});
-
+// Event listeners for login buttons
 document.getElementById('employee-submit').addEventListener('click', () => {
     const username = document.getElementById('employee-username').value;
     const password = document.getElementById('employee-password').value;
@@ -32,7 +48,7 @@ document.getElementById('employee-submit').addEventListener('click', () => {
 
     if (user) {
         const token = generateToken(user);
-        alert(`Employee login successful. Token: ${token}`);
+        localStorage.setItem("token", token);
     } else {
         alert('Invalid credentials');
     }
@@ -46,8 +62,11 @@ document.getElementById('customer-submit').addEventListener('click', () => {
 
     if (user) {
         const token = generateToken(user);
-        alert(`Customer login successful. Token: ${token}`);
+        localStorage.setItem("token", token);
     } else {
         alert('Invalid credentials');
     }
 });
+
+// Initially, show the employee login form
+showLoginForm('employee');
