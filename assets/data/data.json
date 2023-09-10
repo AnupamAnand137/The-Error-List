@@ -1,28 +1,27 @@
 {
     "products": [
         {
-            "name": "Product1",
-            "id":"Unique1",
-            "price": 49,
-            "category":"Level 1",
-            "buyNowLink": "https://example.com/product/nike-shoes"
+          "name": "Formal Shoes",
+          "price": "₹ 5000",
+          "category": "Level 1",
+          "product_id": "12345",
+          "image_src": "Images/FormalShoe.jpg"
         },
         {
-            "name": "Product2",
-            "id":"Unique1",
-            "price": 49,
-            "category":"Level 2",
-            "buyNowLink": "https://example.com/product/nike-shoes"
+          "name": "Sneakers",
+          "price": "₹ 3000",
+          "category": "Level 2",
+          "product_id": "34245",
+          "image_src": "Images/Sneakers.jpg"
         },
         {
-            "name": "Product3",
-            "id":"Unique1",
-            "price": 49,
-            "category":"Level 3",
-            "buyNowLink": "https://example.com/product/nike-shoes"
+          "name": "Casual Wear",
+          "price": "₹ 1000",
+          "category": "Level 3",
+          "product_id": "45677",
+          "image_src": "Images/CasualWear.jpg"
         }
-        
-    ],
+      ],
     "ordersData": [
         {
           "orderID": "12345",

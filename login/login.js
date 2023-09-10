@@ -49,7 +49,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (user) {
             const token = generateToken(user);
-            localStorage.setItem("token", token);
+            sessionStorage.setItem("token", token);
+            window.location.href = employee-home.html;
         } else {
             alert('Invalid credentials');
         }
@@ -63,7 +64,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (user) {
             const token = generateToken(user);
-            localStorage.setItem("token", token);
+            sessionStorage.setItem("token", token);
+            window.location.href = customer-home.html;
         } else {
             alert('Invalid credentials');
         }
