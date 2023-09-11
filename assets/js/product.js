@@ -9,9 +9,18 @@ async function fetchAndDisplayProducts() {
     //   console.log(products);
     const productsContainer = document.querySelector(".products-container");
     function addToCart(product) {
-        cart.push(product);
-        // You can also save the cart in local storage to persist it across page reloads
-        localStorage.setItem('cart', JSON.stringify(cart));
+      const existingCartItem = cart.find((item) => item.product_id === product.product_id);
+      if (existingCartItem) {
+        // If the product already exists in the cart, increase its quantity
+        console.log(existingCartItem);
+        existingCartItem.quantity += 1;
+      } else {
+        // If it doesn't exist, add it to the cart with a quantity of 1
+        console.log(product);
+        cart.push({ ...product, quantity: 1 });
+      }
+    
+      localStorage.setItem('cart', JSON.stringify(cart));
     }
     // Loop through the products and create product boxes
     products.forEach((product, index) => {
