@@ -31,11 +31,9 @@ document.addEventListener("DOMContentLoaded", function () {
                     }
                     const viewInvoice = document.createElement("button");
                     viewInvoice.addEventListener("click", function () {
-                        const htmlFileUrl = "path/to/your-html-file.html"; // Replace with the actual URL
-                        // Open the HTML file for invoice
-                        window.open(htmlFileUrl);
+                        const invoiceUrl = `invoice.html?orderID=${orderId}`;
+                        window.open(invoiceUrl, "_blank");
                     });
-
 
                     const status = document.createElement("div");
                     orderCard.classList.add("view-invoice-btn")
