@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Quote</title>
+    <link rel="stylesheet" href="assets\CustomerNewQuote.css">
+
+</head>
+<body>
+
+    <header>
+        <h1>New Quote</h1>
+    </header>
+
+    <section class="quote-form">
+        <h2>Quote Details</h2>
+        <form id="quote-form">
+            <label for="order-date">Order Date:</label>
+            <input type="date" id="order-date" name="order-date" required><br>
+
+            <label for="customer-id">Customer Name/ID:</label>
+            <input type="text" id="customer-id" name="customer-id"><br>
+
+            <!-- Auto-populated fields -->
+            <label for="customer-name">Customer Name:</label>
+            <input type="text" id="customer-name" name="customer-name" ><br>
+
+            <label for="customer-gst">Customer GST No:</label>
+            <input type="text" id="customer-gst" name="customer-gst" ><br>
+
+            <label for="customer-address">Customer Shipping Address:</label>
+            <textarea id="customer-address" name="customer-address" ></textarea><br>
+
+            <label for="customer-city">Customer City:</label>
+            <input type="text" id="customer-city" name="customer-city" ><br>
+
+            <!-- End of Auto-populated fields -->
+
+            <label for="customer-phone">Customer Phone Number:</label>
+            <input type="tel" id="customer-phone" name="customer-phone"><br>
+
+            <label for="customer-email">Customer Email:</label>
+            <input type="email" id="customer-email" name="customer-email"><br>
+
+            <label for="customer-pincode">Customer Pin Code:</label>
+            <input type="text" id="customer-pincode" name="customer-pincode"><br>
+
+            <label for="product-list">Products:</label>
+            <div class="product-checkboxes">
+            <input type="checkbox" id="formal-shoes" name="product" value="Formal Shoes">
+            <label for="formal-shoes">Formal Shoes</label>
+
+           <input type="checkbox" id="sneakers" name="product" value="Sneakers">
+           <label for="sneakers">Sneakers</label>
+
+           <input type="checkbox" id="casual-shoes" name="product" value="Casual Shoes">
+           <label for="casual-shoes">Casual Shoes</label>
+           </div>
+
+            <label for="shipping-cost">Shipping Cost:</label>
+            <input type="text" id="shipping-cost" name="shipping-cost" readonly>
+
+            <label for="total-order-value">Total Order Value:</label>
+            <input type="text" id="total-order-value" name="total-order-value" readonly>
+
+            <button type="submit">Create Quote</button>
+        </form>
+    </section>
+
+
+    <script>
+        // JavaScript code for handling the frontend interactions
+        const quoteForm = document.getElementById('quote-form');
+        const customerIdField = document.getElementById('customer-id');
+        const customerNameField = document.getElementById('customer-name');
+        const customerGSTField = document.getElementById('customer-gst');
+        const customerAddressField = document.getElementById('customer-address');
+        const customerCityField = document.getElementById('customer-city');
+        const shippingCostField = document.getElementById('shipping-cost');
+        const totalOrderValueField = document.getElementById('total-order-value');
+
+        // Event listener for the customer ID/Name field to trigger auto-population
+        customerIdField.addEventListener('input', () => {
+            // Implement logic to fetch customer data and populate the fields
+            // This is a simplified example and requires integration with a backend system
+        });
+
+        // Event listener for the quote form submission
+        quoteForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+            // Implement calculation logic for shipping cost and total order value
+            // Update the shippingCostField and totalOrderValueField accordingly
+        });
+    </script>
+</body>
+</html>
