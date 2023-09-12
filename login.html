@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Page</title>
+    <link rel="stylesheet" href="assets/css/login.css">
+</head>
+<body>
+    <header>
+        <h1 class="heading">Order Processing System</h1>
+    </header>
+
+    <div class="container">
+        <div class="slider"></div>
+        <div class="btn">
+            <button class="login" data-target="employee">Login as Employee</button>
+            <button class="login" data-target="user">Login as User</button>
+        </div>
+
+        <div class="form-section">
+
+            <div class="login-box">
+                <label><b>User ID </b> <input type="text" class="email ele" placeholder="User ID" id="employee-username"></label>
+                <label><b>Password</b> <input type="password" class="password ele" placeholder="Password" id="employee-password"></label>
+                <button class="clkbtn" id="employee-submit">Login</button>
+            </div>
+
+            <div class="login-box">
+                <label><b>User ID/Username</b> <input type="text" class="email ele" placeholder="User ID/Username" id="customer-username"></label>
+                <label><b>Password</b> <input type="password" class="password ele" placeholder="Password" id="customer-password"></label>
+                <button class="clkbtn" id="customer-submit">Login</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/login.js"></script>
+</body>
+</html>
