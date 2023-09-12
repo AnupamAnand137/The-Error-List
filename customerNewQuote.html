@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>New Quote</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="assets\CustomerNewQuote.css">
 
 </head>
 <body>
-  
+
     <header>
         <h1>New Quote</h1>
     </header>
@@ -47,13 +47,22 @@
             <input type="text" id="customer-pincode" name="customer-pincode"><br>
 
             <label for="product-list">Products:</label>
-            <!-- UI to view, select, and add products can be added here -->
+            <div class="product-checkboxes">
+            <input type="checkbox" id="formal-shoes" name="product" value="Formal Shoes">
+            <label for="formal-shoes">Formal Shoes</label>
+
+           <input type="checkbox" id="sneakers" name="product" value="Sneakers">
+           <label for="sneakers">Sneakers</label>
+
+           <input type="checkbox" id="casual-shoes" name="product" value="Casual Shoes">
+           <label for="casual-shoes">Casual Shoes</label>
+           </div>
 
             <label for="shipping-cost">Shipping Cost:</label>
-            <input type="text" id="shipping-cost" name="shipping-cost" readonly><br>
+            <input type="text" id="shipping-cost" name="shipping-cost" readonly>
 
             <label for="total-order-value">Total Order Value:</label>
-            <input type="text" id="total-order-value" name="total-order-value" readonly><br>
+            <input type="text" id="total-order-value" name="total-order-value" readonly>
 
             <button type="submit">Create Quote</button>
         </form>

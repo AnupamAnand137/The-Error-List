@@ -6,6 +6,16 @@ body {
     background-color: #61A5C2;
 
 }
+.product-checkboxes {
+    display: flex;
+    flex-direction: row; /* Align checkboxes horizontally */
+    align-items: center; /* Vertically center items in the flex container */
+}
+
+/* Add some spacing between checkboxes and labels */
+.product-checkboxes input[type="checkbox"] {
+    margin-right: 10px;
+}
 
 header {
     /* background-color:#a7e5a1; */
@@ -90,7 +100,8 @@ button {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
-    background-image: url('imga.avif');
+    /* background-image: url('imga.avif'); */
+    background-color: #014F86;
 
 }
 
