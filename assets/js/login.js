@@ -1,4 +1,4 @@
-
+import { setLastLogin } from './loginTimeFunc.js';
 document.addEventListener("DOMContentLoaded", function () {
     const employeeButton = document.querySelector(".login[data-target='employee']");
     const userButton = document.querySelector(".login[data-target='user']");
@@ -52,8 +52,8 @@ document.addEventListener("DOMContentLoaded", function () {
             const token = generateToken(user);
             sessionStorage.setItem("token", token);
             sessionStorage.setItem("is_Logged_In", true);
-            window.location.href = employee-home.html;
-            // setLastLogin();
+            window.location.href = "employeeDashboard.html";
+            setLastLogin();
         } else {
             alert('Invalid credentials');
         }
@@ -68,9 +68,9 @@ document.addEventListener("DOMContentLoaded", function () {
         if (user) {
             const token = generateToken(user);
             sessionStorage.setItem("token", token);
-            window.location.href = "customerHome.html";
             sessionStorage.setItem("is_Logged_In", true);
-            // setLastLogin();
+            window.location.href = "customerHome.html";
+            setLastLogin();
         } else {
             alert('Invalid credentials');
         }

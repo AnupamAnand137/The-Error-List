@@ -5,14 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Order History</title>
     <link rel="stylesheet" href="assets/css/orders.css">
+    <link rel="stylesheet" href="assets/css/navbar.css">
+
 </head>
 <!-- ... (head section remains the same) -->
 <body>
+    <header>
+        <nav>
+            <div class="logo">Footwear Shop</div>
+            <ul class="nav-links">
+                <li><a href="customerHome.html">Home</a></li>
+                <li><a href="product.html">Products</a></li>
+                <li><a href="cart.html" id ="cart-link">Cart</a></li>
+                <li><a href="orders.html" id="orders-link">Orders</a></li>
+                <li><a href="javascript:void(0);" id="logout" onclick="logout()">Logout</a></li>
+        </nav>
+    </header>
     <div class="container" id="orderContainer">
         <!-- Orders will be loaded here -->
     </div>
 
     <script src="assets/js/orders.js"></script>
+    <script src="assets/js/logout.js"></script>
 </body>
 </html>
 

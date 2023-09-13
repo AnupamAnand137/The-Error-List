@@ -1,4 +1,5 @@
 // JavaScript code to fetch and display orders and invoices
+import { getLastLogin } from './loginTimeFunc.js';
 const ordersData = [
     {
         id: 1,
@@ -18,11 +19,11 @@ const ordersData = [
     },
     // Add more order data as needed
 ];
+document.getElementById("last-login").textContent = getLastLogin();
 
 document.getElementById("view-orders").addEventListener("click", function () {
     const ordersList = document.getElementById("orders");
     ordersList.innerHTML = "";
-
     ordersData.forEach((order) => {
         const listItem = document.createElement("li");
         listItem.className = "order-item";
@@ -36,7 +37,6 @@ document.getElementById("view-orders").addEventListener("click", function () {
         `;
         ordersList.appendChild(listItem);
     });
-
     const invoice = document.getElementById("invoice");
     invoice.style.display = "block";
     invoice.innerHTML = `

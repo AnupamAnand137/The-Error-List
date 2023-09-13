@@ -1,4 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
+    if(!sessionStorage.getItem("is_Logged_In"))
+    {
+        window.location.href = "login.html";
+    }
+
     const orderContainer = document.getElementById("orderContainer");
 
     // Define a Set to store unique order IDs

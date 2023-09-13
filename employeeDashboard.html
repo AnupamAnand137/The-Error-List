@@ -7,15 +7,26 @@
     <title>Employee Dashboard</title>
 </head>
 <body>
-    <div class="header">
-        <h1>Employee Dashboard</h1>
-    </div>
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <h1>Employee Dashboard</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="employeeDashboardwithnavbaar.html">Home</a></li>
+                <li><a href="#">Orders</a></li>
+                <li><a href="customerNewQuote.html" target="_blank">Create New Quote</a></li>
+                <li><a href="#">Import Products</a></li>
+                <li><a href="javascript:void(0);" id="logout" onclick="logout()">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <div class="container">
         <div class="employee-info">
             <h2>Employee Information</h2>
             <p>ID: <span id="employee-id">12345</span></p>
-            <p>Last Login: <span id="last-login">2023-09-10 09:30 AM</span></p>
+            <p>Last Login: <span id="last-login"></span></p>
         </div>
 
         <h2>Orders</h2>
@@ -28,11 +39,9 @@
         <div class="invoice" id="invoice">
             <!-- Invoice details will be displayed here using JavaScript -->
         </div>
-
-        <a href="#">Create New Quote</a>
-        <a href="#">Import Products</a>
     </div>
 
     <script src="assets/js/employeeDashboard.js"></script>
+    <script src="assets/js/logout.js"></script>
 </body>
 </html>

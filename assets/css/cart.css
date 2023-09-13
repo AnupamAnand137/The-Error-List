@@ -4,13 +4,6 @@ body {
     padding: 0;
 }
 
-header {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px;
-}
-
 .cart-container {
     max-width: 800px;
     margin: 20px auto;
@@ -32,4 +25,10 @@ button {
     border: none;
     padding: 5px 10px;
     cursor: pointer;
+}
+
+.empty-message {
+    text-align: center;
+    justify-content: center;
+    font-weight: bold;
 }

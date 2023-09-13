@@ -21,10 +21,9 @@ header {
     padding: 1rem 0;
 }
 
-/* Navigation styles */
+/* Navigation styles
 nav {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
@@ -36,15 +35,13 @@ nav {
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 2px;
+    margin-right: 50%;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-}
-
-.nav-links li {
-    margin-right: 1.5rem;
+    gap: 10px;
 }
 
 .nav-links a {
@@ -52,11 +49,12 @@ nav {
     color: var(--color-white);
     font-weight: bold;
     transition: color var(--transition-1);
+    display: inline;
 }
 
 .nav-links a:hover {
     color: var(--color-primary-1);
-}
+} */
 
 #productContainer {
     display: flex;

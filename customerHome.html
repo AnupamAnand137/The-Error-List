@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/customerHome.css">
+    <link rel="stylesheet" href="assets/css/navbar.css">
+    <script type="module" src="assets/js/CustomerHome.js"></script>
+    <script src="assets/js/logout.js"></script>
     <title>Footwear Order Processing System</title>
 </head>
 <body>
@@ -11,8 +14,12 @@
         <nav>
             <div class="logo">Footwear Shop</div>
             <ul class="nav-links">
-                <li><a href="#">Cart</a></li>
-                <li><a href="#">Login</a></li>
+                <li><a href="customerHome.html">Home</a></li>
+                <li><a href="product.html">Products</a></li>
+                <li><a href="cart.html" id ="cart-link">Cart</a></li>
+                <li><a href="login.html" id="login-link">Login</a></li>
+            </ul>
+            <ul class="nav-links" id="dynamicNav">
             </ul>
         </nav>
     </header>

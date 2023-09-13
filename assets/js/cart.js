@@ -6,7 +6,7 @@ async function fetchData() {
         const productsData = await response.json();
         // Load the cart from local storage if available
         const savedCart = JSON.parse(localStorage.getItem('cart'));
-        cart.push(...savedCart); 
+        if(savedCart) cart.push(...savedCart); 
         displayCart();       
         // You can use the 'cart' data here
     } catch (error) {
@@ -15,10 +15,16 @@ async function fetchData() {
 }
 // Function to display the cart
 function displayCart() {
-    console.log(cart);
+    // console.log(cart);
     const cartContainer = document.querySelector('.cart-container');
     cartContainer.innerHTML = '';
-
+    if(cart.length === 0)
+    {
+        const message = document.createElement('div');
+        message.classList.add('empty-message');
+        message.textContent = "Your Cart is Empty"
+        cartContainer.append(message);
+    }
     cart.forEach((product) => {
         const cartItem = document.createElement('div');
         cartItem.classList.add('cart-item');

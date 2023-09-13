@@ -1,6 +1,6 @@
 // Function to store the last login timestamp in localStorage
 export function setLastLogin() {
-    const lastLoginTime = new Date().toString();
+    const lastLoginTime = new Date().toLocaleTimeString();
     localStorage.setItem('lastLogin', lastLoginTime);
   }
   

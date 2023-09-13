@@ -4,11 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/cart.css">
+    <link rel="stylesheet" href="assets/css/navbar.css">
     <title>My Cart</title>
 </head>
 <body>
     <header>
-        <h1>My Cart</h1>
+        <nav>
+            <div class="logo">Footwear Shop</div>
+            <ul class="nav-links">
+                <li><a href="customerHome.html">Home</a></li>
+                <li><a href="product.html">Products</a></li>
+                <li><a href="cart.html" id ="cart-link">Cart</a></li>
+                <li><a href="orders.html" id="orders-link">Orders</a></li>
+                <li><a href="javascript:void(0);" id="logout" onclick="logout()">Logout</a></li>
+        </nav>
     </header>
     <div class="cart-container">
         <!-- Cart items will be displayed here -->
