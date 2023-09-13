@@ -29,37 +29,40 @@
           "orderID": "12345",
           "orderDate": "2023-09-10",
           "customerName": "John Doe",
-          "customerEmail": "johndoe@gmail.com",
-          "billingAddress": "123 Main St, City, Country",
           "shippingAddress": "123 Main St, City, Country",
           "products": ["Product 1", "Product 2"],
-          "phone":"7487999183",
           "totalOrderValue": "$100.00",
           "shippingCost": "$10.00",
           "shippingAgency": "Shipping Express",
           "status": "Approved"
         },
         {
-          "orderID": "345",
-          "orderDate": "2023-09-10",
-          "customerName": "John Doe",
-          "customerEmail": "johndoe@gmail.com",
-          "billingAddress": "123 Main St, City, Country",
-          "shippingAddress": "123 Main St, City, Country",
-          "products": ["Product 1", "Product 2"],
-          "phone":"7487999183",
-          "totalOrderValue": "$100.00",
-          "shippingCost": "$10.00",
-          "shippingAgency": "Shipping Express",
-          "status": "pending"
-        }
-        
+            "orderID": "345",
+            "orderDate": "2023-09-10",
+            "customerName": "John Doe",
+            "shippingAddress": "123 Main St, City, Country",
+            "products": ["Product 1", "Product 2"],
+            "totalOrderValue": "$100.00",
+            "shippingCost": "$10.00",
+            "shippingAgency": "Shipping Express",
+            "status": "Pending"
+          }
       ],
       "invoiceData": [
         {
             "invoice_id": "INV12345",
             "invoice_date": "2023-09-10",
-            "order_number": "12345",
+            "order_details": {
+                "order_number": "ORD9876",
+                "order_date": "2023-09-05",
+                "shipping_address": "123 Main Street, City, Country",
+                "billing_address": "456 Billing Road, City, Country"
+            },
+            "customer_details": {
+                "customer_name": "John Doe",
+                "customer_email": "johndoe@example.com",
+                "customer_phone": "+1 (555) 123-4567"
+            },
             "products": [
                 {
                 "product_id": "P123",
@@ -78,7 +81,9 @@
             ],
             "gst_type": "Inter-State",
             "total_gst_amount": 39.0,
-            "total_invoice_value": 239.0  
+            "total_invoice_value": 239.0,
+            "status": "Paid"
+              
         }
       ]
       
