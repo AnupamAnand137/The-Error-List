@@ -35,20 +35,8 @@ async function fetchAndDisplayProducts() {
       }
     }
 
-    // Call the updateNavigation function on page load
-    updateNavigation();
-
-    // Handle clicking the Cart link
-    const cartLink = document.getElementById("cart-link");
-    cartLink.addEventListener("click", function (event) {
-      event.preventDefault();
-      if (checkAuthentication()) {
-        console.log("cart authentication");
-        window.location.href = "cart.html";
-      } else {
-        // User is not authenticated, redirect to the Login page
-        window.location.href = "login.html"; // Replace with your login page URL
-      }
+      localStorage.setItem('cart', JSON.stringify(cart));
+    }
     });
 
     // Loop through the products and create product boxes
