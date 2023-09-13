@@ -69,6 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const token = generateToken(user);
             sessionStorage.setItem("token", token);
             sessionStorage.setItem("is_Logged_In", true);
+
             window.location.href = "customerHome.html";
             setLastLogin();
         } else {
