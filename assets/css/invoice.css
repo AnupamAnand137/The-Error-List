@@ -1,33 +1,80 @@
+/* Reset some default styles */
 body {
+    margin: 0;
+    padding: 0;
     font-family: Arial, sans-serif;
-    margin: 20px;
 }
 
+/* Style the header */
 h1 {
     text-align: center;
+    background-color: black;
+    color: #fff;
+    padding: 20px;
+    margin: 0;
 }
 
+/* Style the main content container */
 #invoiceHeader {
-    margin-bottom: 20px;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
 }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 20px;
+/* Style the section headings */
+h2 {
+    color: #333;
 }
 
-table, th, td {
-    border: 1px solid #000;
+/* Style the invoice details */
+p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.5;
 }
 
-th, td {
-    padding: 8px;
-    text-align: left;
-}
-
-#totalAmount {
+p strong {
     font-weight: bold;
 }
 
-/* Add your additional CSS styles here */
+/* Style the table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+/* Style the table header */
+thead {
+    background-color: black;
+    color: #fff;
+}
+
+thead th {
+    padding: 10px;
+    text-align: left;
+}
+
+/* Style the table rows */
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tbody tr:hover {
+    background-color: #ddd;
+}
+
+/* Style the total amount */
+#totalAmount {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: right;
+}
+
+/* Add some spacing and padding */
+#invoiceHeader, table, p {
+    margin: 20px;
+    padding: 10px;
+}
+
