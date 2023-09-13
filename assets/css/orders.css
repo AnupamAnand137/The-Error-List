@@ -21,6 +21,7 @@ header {
     color: #fff;
     padding: 10px 0;
     text-align: center;
+    font-family: 'Arial', sans-serif;
 }
 
 .nav {
@@ -32,6 +33,7 @@ header {
 .logo {
     font-size: 24px;
     font-weight: bold;
+    font-family: 'Arial', sans-serif;
 }
 
 .nav-links {
@@ -46,10 +48,11 @@ header {
 }
 
 .nav-links a {
-    color: #fff;
+    color: #333;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
+    font-family: 'Arial', sans-serif;
 }
 
 .nav-links a:hover {
@@ -58,12 +61,13 @@ header {
 
 /* Order History Styles */
 .order-card {
-    background-color: #fff;
+    background-color: #f9f9f9;
     border: 1px solid #ddd;
     border-radius: 5px;
     padding: 20px;
     margin-bottom: 20px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
 }
 
 .order-details {
@@ -74,12 +78,20 @@ header {
     margin: 5px 0;
 }
 
-.status {
-    font-weight: bold;
-    text-transform: uppercase;
-    padding: 5px 10px;
-    border-radius: 20px;
-    display: inline-block;
+/* Style the text before and after the colon */
+.order-details p strong {
+    color: black; /* Text on the left side of the colon */
+}
+
+.order-details p::after {
+    content: ':';
+    color: black; /* Colon color */
+    margin-right: 20px; /* Space between colon and text on the right side */
+}
+
+/* Style the text on the right side of the colon */
+.order-details p:not(:last-child)::after {
+    color: white; /* Text on the right side of the colon */
 }
 
 .status-pending {
@@ -91,39 +103,26 @@ header {
 }
 
 .status-completed {
-    color: blue;
+    color: blue; 
 }
 
 .status-expired {
-    color: red;
+    color: red; 
 }
-
 .view-invoice-btn {
     margin-top: 10px;
+    background-color: #b1abab;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Arial', sans-serif;
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .container {
-        padding: 10px;
-    }
-
-    .nav {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .logo {
-        margin-bottom: 10px;
-    }
-
-    .nav-links {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .order-card {
-        padding: 10px;
-    }
+.view-invoice-btn:hover {
+    background-color: #ab7a5f;
 }
+
 
