@@ -3,8 +3,8 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #61A5C2;
-
+    /* background-color: #61A5C2; */
+/* background-color: rgba(0, 0, 0, 0.8); */
 }
 
 header {
@@ -14,7 +14,8 @@ header {
     text-align: center;
     padding: 10px 0;
     /* background-image: url('imga.avif'); */
-      background-color: #014F86;
+      /* background-color: #014F86; */
+      background-color: rgba(0, 0, 0, 0.8);
 
 }
 
@@ -47,6 +48,24 @@ label {
     display: block;
     margin-bottom: 10px; /* Increased margin for labels */
 }
+.navbar {
+  text-align: right;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
 
 input[type="text"],
 input[type="tel"],
@@ -90,7 +109,7 @@ button {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
-    background-image: url('imga.avif');
+    background-color: rgba(0, 0, 0, 0.8);
 
 }
 
