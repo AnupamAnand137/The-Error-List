@@ -1,0 +1,202 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic styling for the entire page */
+body {
+    font-family: var(--font-family-1);
+    background-color: var(--color-secondary-1);
+    color: var(--color-black-1);
+    margin: 10px; /* Add margin */
+    padding: 20px; /* Add padding */
+}
+
+/* Header styles */
+header {
+    background-color: #ab7a5f;
+    color: var(--color-white);
+    padding: 1rem 0;
+}
+
+/* Navigation styles */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-right: 1.5rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--color-white);
+    font-weight: bold;
+    transition: color var(--transition-1);
+}
+
+.nav-links a:hover {
+    color: var(--color-primary-1);
+}
+
+/* Hero section styles */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem 0;
+}
+
+.hero-content {
+    flex: 1;
+    padding: 2rem;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--color-black-1);
+}
+
+.hero p {
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+    color: var(--color-black-3);
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 0.5rem 1.8rem;
+    background-color: #795744;
+    color: var(--color-white);
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color var(--transition-1);
+}
+
+.cta-button:hover {
+    background-color: #453227;
+}
+
+/* Hero image styles */
+.hero-image {
+    flex: 1;
+    text-align: center;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Featured product box styles */
+/* Style the "Featured Products" heading */
+.featured-products h2 {
+    text-align: center; /* Center-align the heading */
+    font-size: 2.5rem; /* Increase the font size */
+    color: #000; /* Set the text color to black */
+    text-decoration: underline #ab7a5f; /* Add an underline with colored border */
+    text-underline-offset: 0.1em; /* Adjust the underline offset if needed */
+}
+
+.product-box {
+    
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    cursor: pointer;
+    margin: 2rem;
+}
+
+
+.product-box img {
+    max-width: 280px; /* Set the maximum width to make the images smaller */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 1rem;
+}
+
+.product-box a {
+    text-decoration: none;
+    color: var(--color-primary-1);
+}
+
+.product-box a:hover {
+    color: var(--color-primary-3);
+}
+
+.product-box .name {
+    font-size: 1.5rem;
+   
+}
+.featured-products > .products {
+    margin: 3rem auto;
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    justify-content: center;
+}
+
+.cta-container {
+    text-align: center;
+    margin-top: 1rem; /* Add some space above the button */
+    margin-bottom: 4rem; 
+}
+
+.cta-container .btn {
+    padding: 0.5rem 1.8rem;
+    background-color: #795744;
+    color: var(--color-white);
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    
+    transition: background-color var(--transition-1);
+}
+
+.cta-container .btn:hover {
+    background-color: #453227;
+}
+
+/* Footer styles */
+footer {
+    background-color: #ab7a5f;
+    color: var(--color-white);
+    padding: 1rem 0;
+    text-align: center;
+    /*position: fixed; /* Set the footer's position to fixed */
+    bottom: 0; /* Position it at the bottom of the viewport */
+    left: 0;
+    right: 0;
+}
+
+.footer-content {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+

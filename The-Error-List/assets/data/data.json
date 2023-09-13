@@ -1,0 +1,90 @@
+{
+    "cart": [],
+
+    "products": [
+        {
+          "name": "Formal Shoes",
+          "price": "₹ 5000",
+          "category": "Level 1",
+          "product_id": "12345",
+          "image_src": "Images/FormalShoe.jpg"
+        },
+        {
+          "name": "Sneakers",
+          "price": "₹ 3000",
+          "category": "Level 2",
+          "product_id": "34245",
+          "image_src": "Images/Sneakers.jpg"
+        },
+        {
+          "name": "Casual Wear",
+          "price": "₹ 1000",
+          "category": "Level 3",
+          "product_id": "45677",
+          "image_src": "Images/CasualWear.jpg"
+        }
+      ],
+    "ordersData": [
+        {
+          "orderID": "12345",
+          "orderDate": "2023-09-10",
+          "customerName": "John Doe",
+          "shippingAddress": "123 Main St, City, Country",
+          "products": ["Product 1", "Product 2"],
+          "totalOrderValue": "$100.00",
+          "shippingCost": "$10.00",
+          "shippingAgency": "Shipping Express",
+          "status": "Approved"
+        },
+        {
+            "orderID": "345",
+            "orderDate": "2023-09-10",
+            "customerName": "John Doe",
+            "shippingAddress": "123 Main St, City, Country",
+            "products": ["Product 1", "Product 2"],
+            "totalOrderValue": "$100.00",
+            "shippingCost": "$10.00",
+            "shippingAgency": "Shipping Express",
+            "status": "Pending"
+          }
+      ],
+      "invoiceData": [
+        {
+            "invoice_id": "INV12345",
+            "invoice_date": "2023-09-10",
+            "order_details": {
+                "order_number": "ORD9876",
+                "order_date": "2023-09-05",
+                "shipping_address": "123 Main Street, City, Country",
+                "billing_address": "456 Billing Road, City, Country"
+            },
+            "customer_details": {
+                "customer_name": "John Doe",
+                "customer_email": "johndoe@example.com",
+                "customer_phone": "+1 (555) 123-4567"
+            },
+            "products": [
+                {
+                "product_id": "P123",
+                "product_name": "Product A",
+                "quantity": 2,
+                "unit_price": 25.0,
+                "gst_percentage": 18.0
+                },
+                {
+                "product_id": "P456",
+                "product_name": "Product B",
+                "quantity": 3,
+                "unit_price": 35.0,
+                "gst_percentage": 12.0
+                }
+            ],
+            "gst_type": "Inter-State",
+            "total_gst_amount": 39.0,
+            "total_invoice_value": 239.0,
+            "status": "Paid"
+              
+        }
+      ]
+      
+}
