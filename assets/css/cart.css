@@ -32,3 +32,10 @@ button {
     justify-content: center;
     font-weight: bold;
 }
+
+.buy-now {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+}
