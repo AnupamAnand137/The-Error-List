@@ -9,7 +9,7 @@ import com.ecom.orderprocessingsystem.models.Product;
 
 public class CustomerBLImpl implements CustomerBL {
 
-	private CustomerDao customerDao;
+	private CustomerDao customerDao= new CustomerDaoImpl();
 
 	@Override
 	public List<Customer> getAllCustomers() {
