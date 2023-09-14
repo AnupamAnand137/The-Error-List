@@ -5,30 +5,34 @@ import java.util.Map;
 
 public class Customer {
 
-	private long customerID;
+	// Data Members of Customer Class
+	// Access specifier - private
+
+	private int customerID;
 	private String name;
 	private String address;
 	private String city;
 	private String email;
-	private String phoneNo;
-	private String pincode;
+	private long phoneNo;
+	private int pincode;
 	// Map of product with the quantity
+	// Map for Efficient Navigation & Spatial Analysis
 	private Map<Product, Integer> products;
+
+	// Getter & Setter methods
+
+	// not including the setter methods of Customer ID and Name and phone no. as
+	// they will be fixed
+	// at the time of customer creation and not give the privillage to change these
+	// fields after the
+	// creation of new customer
 
 	public long getCustomerID() {
 		return customerID;
 	}
 
-	public void setCustomerID(long customerID) {
-		this.customerID = customerID;
-	}
-
 	public String getName() {
 		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
 	}
 
 	public String getAddress() {
@@ -55,19 +59,19 @@ public class Customer {
 		this.email = email;
 	}
 
-	public String getPhoneNo() {
+	public long getPhoneNo() {
 		return phoneNo;
 	}
 
-	public void setPhoneNo(String phoneNo) {
+	public void setPhoneNo(long phoneNo) {
 		this.phoneNo = phoneNo;
 	}
 
-	public String getPincode() {
+	public int getPincode() {
 		return pincode;
 	}
 
-	public void setPincode(String pincode) {
+	public void setPincode(int pincode) {
 		this.pincode = pincode;
 	}
 
@@ -76,17 +80,18 @@ public class Customer {
 	}
 
 	public void setProducts(Product product, int count) {
-        products.put(product, count);
-    }
+		products.put(product, count);
+	}
 
+	// To string use to print the customer details
 	@Override
 	public String toString() {
 		return "Customer [customerID=" + customerID + ", name=" + name + ", address=" + address + ", city=" + city
-				+ ", email=" + email + ", phoneNo=" + phoneNo + ", pincode=" + pincode + ", products=" + products + "]";
+				+ ", email=" + email + ", phoneNo=" + phoneNo + ", pincode=" + pincode + "]";
 	}
 
-	public Customer(long customerID, String name, String address, String city, String email, String phoneNo,
-			String pincode, Map<Product, Integer> products) {
+	// Customer's Parameterized Constructor
+	public Customer(int customerID, String name, String address, String city, String email, long phoneNo, int pincode) {
 		super();
 		this.customerID = customerID;
 		this.name = name;
@@ -98,6 +103,7 @@ public class Customer {
 		this.products = new HashMap<>();
 	}
 
+	// Customer's Default Constructor
 	public Customer() {
 		super();
 		// TODO Auto-generated constructor stub
