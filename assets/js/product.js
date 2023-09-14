@@ -8,7 +8,7 @@ async function fetchAndDisplayProducts() {
     const response = await fetch("assets/data/data.json");
     const productsData = await response.json();
     const products = productsData.products;
-    const cart = JSON.parse(localStorage.getItem("cart"));
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
     //   console.log(products);
     const productsContainer = document.querySelector(".products-container");
     function addToCart(product) {

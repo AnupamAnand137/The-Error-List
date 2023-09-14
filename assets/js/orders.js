@@ -35,6 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         orderDetails.appendChild(detail);
                     }
                     const viewInvoice = document.createElement("button");
+                    viewInvoice.textContent = "View Invoice";
                     viewInvoice.addEventListener("click", function () {
                         const invoiceUrl = `invoice.html?orderID=${orderId}`;
                         window.open(invoiceUrl, "_blank");

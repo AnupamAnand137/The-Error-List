@@ -119,6 +119,7 @@ header {
     cursor: pointer;
     transition: background-color 0.3s ease;
     font-family: 'Arial', sans-serif;
+    border-radius: 2%;
 }
 
 .view-invoice-btn:hover {

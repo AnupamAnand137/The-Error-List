@@ -1,5 +1,4 @@
 {
-
   "products": [
       {
         "name": "Formal Shoes",
@@ -27,30 +26,30 @@
       {
         "orderID": "12345",
         "orderDate": "2023-09-10",
-        "customerName": "John Doe",
-        "customerEmail": "johndoe@gmail.com",
-        "billingAddress": "123 Main St, City, Country",
-        "shippingAddress": "123 Main St, City, Country",
+        "customerName": "Krishna Rathi",
+        "customerEmail": "Krishna@gmail.com",
+        "billingAddress": "HSBC Software Development Office, Pune",
+        "shippingAddress": "HSBC Software Development Office, Pune",
         "products": ["Product 1", "Product 2"],
         "phone":"7487999183",
-        "totalOrderValue": "$100.00",
-        "shippingCost": "$10.00",
-        "shippingAgency": "Shipping Express",
+        "totalOrderValue": "₹100.00",
+        "shippingCost": "₹10.00",
+        "shippingAgency": "BlueDart Express",
         "status": "Approved"
       },
       {
         "orderID": "345",
         "orderDate": "2023-09-10",
-        "customerName": "John Doe",
-        "customerEmail": "johndoe@gmail.com",
-        "billingAddress": "123 Main St, City, Country",
-        "shippingAddress": "123 Main St, City, Country",
+        "customerName": "Krishna Rathi",
+        "customerEmail": "Krishna@gmail.com",
+        "billingAddress": "HSBC Software Development Office, Pune",
+        "shippingAddress": "HSBC Software Development Office, Pune",
         "products": ["Product 1", "Product 2"],
         "phone":"7487999183",
-        "totalOrderValue": "$100.00",
-        "shippingCost": "$10.00",
-        "shippingAgency": "Shipping Express",
-        "status": "pending"
+        "totalOrderValue": "₹100.00",
+        "shippingCost": "₹10.00",
+        "shippingAgency": "BlueDart Express",
+        "status": "Approved"
       }
       
     ],

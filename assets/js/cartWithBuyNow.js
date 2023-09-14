@@ -125,9 +125,9 @@ function createOrder(cart) {
   const orderID = generateOrderID();
   const orderDate = new Date().toISOString().split("T")[0];
   const customerName = "Krishna Rathi"; // You can replace this with actual customer data
-  const customerEmail = "johndoe@gmail.com"; // Replace with actual email
-  const billingAddress = "123 Main St, City, Country"; // Replace with actual address
-  const shippingAddress = "123 Main St, City, Country"; // Replace with actual address
+  const customerEmail = "krishnarathi@gmail.com"; // Replace with actual email
+  const billingAddress = "HSBC Software Development, Pune"; // Replace with actual address
+  const shippingAddress = "HSBC Software Development, Pune"; // Replace with actual address
   const phone = "7487999183"; // Replace with actual phone number
   const totalOrderValue = calculateTotalOrderValue(cart);
   const shippingCost = "₹10.00"; // Replace with actual shipping cost
@@ -209,57 +209,6 @@ function calculateTotalGSTAmount(products) {
       ((product.unit_price * product.gst_percentage) / 100) * product.quantity;
   }
   return totalGST;
-}
-
-function displayOrderDetails(order) {
-  const orderDetailsContainer = document.getElementById("invoiceHeader");
-  console.log("Display Order Details");
-  // Populate the order details
-  document.getElementById("invoiceId").textContent = order.orderID;
-  document.getElementById("invoiceDate").textContent = order.orderDate;
-  document.getElementById("orderNumber").textContent = order.orderID; // You can replace this with the actual order number
-  document.getElementById("orderDate").textContent = order.orderDate;
-  document.getElementById("shippingAddress").textContent =
-    order.shippingAddress;
-  document.getElementById("billingAddress").textContent = order.billingAddress;
-
-  // Populate the customer information
-  document.getElementById("customerName").textContent = order.customerName;
-  document.getElementById("customerEmail").textContent = order.customerEmail;
-  document.getElementById("customerPhone").textContent = order.phone;
-}
-
-function displayInvoiceDetails(invoice) {
-  const invoiceTableBody = document.querySelector("table tbody");
-  const totalAmountSpan = document.getElementById("totalAmount");
-
-  // Populate the invoice details
-  invoiceTableBody.innerHTML = ""; // Clear existing rows
-
-  invoice.products.forEach((product) => {
-    const row = document.createElement("tr");
-    row.innerHTML = `
-      <td>${product.product_name}</td>
-      <td>${product.quantity}</td>
-      <td>₹${product.unit_price.toFixed(2)}</td>
-      <td>${invoice.gst_type}</td>
-      <td>₹${
-        (product.unit_price * product.gst_percentage * product.quantity) / 100
-      }</td>
-    `;
-    invoiceTableBody.appendChild(row);
-  });
-
-  // Calculate and display the total amount
-  const totalAmount = invoice.products.reduce(
-    (total, product) =>
-      total +
-      (product.unit_price * product.quantity +
-        (product.unit_price * product.gst_percentage * product.quantity) / 100),
-    0
-  );
-
-  totalAmountSpan.textContent = `₹${totalAmount.toFixed(2)}`;
 }
 
 // Function to handle the "Buy Now" button click
