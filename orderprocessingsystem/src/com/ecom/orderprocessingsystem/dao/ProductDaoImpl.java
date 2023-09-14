@@ -17,7 +17,7 @@ public class ProductDaoImpl implements ProductDao{
 		super();
 		// TODO Auto-generated constructor stub
 		this.productList=new HashSet<>();
-		productIds=new ArrayList<>();
+		this.productIds=new ArrayList<>();
 	}
 
 

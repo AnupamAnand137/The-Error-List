@@ -17,9 +17,12 @@ public class MySQLHelper {
 		String password = resourceBundle.getString("password");
 		String url = resourceBundle.getString("url");
 		String driver = resourceBundle.getString("driverClassName");
-		// Step1 load the driver
+			
+		//Step 1: load the driver
 		Class.forName(driver);
-		// create the connection
+		//internally DriverManager.registerDriver has already been called 
+		
+		//create the connection
 		return DriverManager.getConnection(url, userName, password);
 
 	}
