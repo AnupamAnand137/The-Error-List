@@ -1,0 +1,22 @@
+[
+    { "id": 1, "name": "Running Shoes", "company": "Nike" },
+    { "id": 2, "name": "Sneakers", "company": "Adidas" },
+    { "id": 3, "name": "Sandals", "company": "Reebok" },
+    { "id": 4, "name": "High Heels", "company": "Gucci" },
+    { "id": 5, "name": "Hiking Boots", "company": "Columbia" },
+    { "id": 6, "name": "Slippers", "company": "UGG" },
+    { "id": 7, "name": "Athletic Shoes", "company": "Under Armour" },
+    { "id": 8, "name": "Flip-Flops", "company": "Havaianas" },
+    { "id": 9, "name": "Dress Shoes", "company": "Clarks" },
+    { "id": 10, "name": "Winter Boots", "company": "Timberland" },
+    { "id": 11, "name": "Running Sneakers", "company": "New Balance" },
+    { "id": 12, "name": "Canvas Shoes", "company": "Vans" },
+    { "id": 13, "name": "Ankle Boots", "company": "Dr. Martens" },
+    { "id": 14, "name": "Platform Heels", "company": "Steve Madden" },
+    { "id": 15, "name": "Espadrilles", "company": "TOMS" },
+    { "id": 16, "name": "Rain Boots", "company": "Hunter" },
+    { "id": 17, "name": "Loafers", "company": "Cole Haan" },
+    { "id": 18, "name": "Running Sandals", "company": "Merrell" },
+    { "id": 19, "name": "Skate Shoes", "company": "Vans" },
+    { "id": 20, "name": "Thong Sandals", "company": "Rainbow" }
+]

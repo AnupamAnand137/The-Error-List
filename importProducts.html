@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Import Products</title>
+  <link rel="stylesheet" type="text/css" href="assets/css/importProducts.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Import Products</h1>
+    <form id="importForm">
+      <label for="fileInput">Select a file:</label>
+      <input type="file" id="fileInput" accept=".json, .xml" required>
+      <button type="submit">Upload</button>
+    </form>
+    <div id="message"></div>
+    <table id="productTable">
+      <thead>
+        <tr>
+          <th>Product ID</th>
+          <th>Name</th>
+          <th>Company</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <script src="assets/js/importProducts.js"></script>
+</body>
+</html>
