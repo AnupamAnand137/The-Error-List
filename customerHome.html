@@ -2,11 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+    <!-- Add IntroJs styles -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.7.0/introjs.min.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/customerHome.css">
     <link rel="stylesheet" href="assets/css/navbar.css">
     <script type="module" src="assets/js/CustomerHome.js"></script>
     <script src="assets/js/logout.js"></script>
+    
+
     <title>Footwear Order Processing System</title>
 </head>
 <body>
@@ -15,9 +21,9 @@
             <div class="logo">Footwear Shop</div>
             <ul class="nav-links">
                 <li><a href="customerHome.html">Home</a></li>
-                <li><a href="product.html">Products</a></li>
-                <li><a href="cart.html" id ="cart-link">Cart</a></li>
-                <li><a href="login.html" id="login-link">Login</a></li>
+                <div data-step="3" data-intro="Here are our all the products."><li><a href="product.html">Products</a></li></div>
+                <div data-step="4" data-intro="All the added to cart products will be visible here."><li><a href="cart.html" id ="cart-link">Cart</a></li></div>
+                <div data-step="5" data-intro="Users need to login from here."><li><a href="login.html" id="login-link">Login</a></li></div>
             </ul>
             <ul class="nav-links" id="dynamicNav">
             </ul>
@@ -25,8 +31,13 @@
     </header>
 
     <main>
+        <div data-step="1" data-intro="Hello, We are The Error List and we will guide you through the website.">
+            <p><a class="btn btn-md btn-primary b1" role="button" href="javascript:void(0);" onclick="javascript:introJs().setOption('showProgress', true).start();">Start Tour »</a></p>
+</div>
+
+        
         <section class="hero">
-            <div class="hero-content">
+            <div class="hero-content" data-step="2" data-intro="Welcome to our footwear shop.">
                 <h1>Welcome to our Footwear Shop</h1>
                 <p>Find the perfect pair for every step you take.</p>
                 <a href="#" class="cta-button">Shop Now</a>
@@ -35,7 +46,7 @@
                 <img src="Images/FootwearHome.jpg" alt="Footwear Shop Image">
             </div>
         </section>
-
+        <div data-step="6" data-intro="Here are our best featured-products.">
         <section class="featured-products">
             <h2>Featured Products</h2>
             <div class="products">
@@ -85,6 +96,7 @@
                 <a href="product.html" class="btn">ALL PRODUCTS</a> <!-- Add the "ALL PRODUCTS" button inside the container -->
             </div>
         </section>
+    </div>
 
         <!-- Rest of your content -->
 
@@ -93,5 +105,6 @@
     <footer>
         <div class="footer-content">Created by the Error list</div>
     </footer>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.7.0/intro.min.js"></script>
 </body>
 </html>
