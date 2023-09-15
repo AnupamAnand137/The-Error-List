@@ -39,3 +39,21 @@ nav {
 .nav-links a:hover {
     color: var(--color-primary-1);
 }
+
+@media screen and (max-width: 768px) {
+    .nav-links {
+       display: flex;
+       flex-direction: column;
+    }
+}
+
+footer {
+    background-color: #ab7a5f;
+    color: var(--color-white);
+    padding: 1rem 0;
+    text-align: center;
+    /*position: fixed; /* Set the footer's position to fixed */
+    bottom: 0; /* Position it at the bottom of the viewport */
+    left: 0;
+    right: 0;
+}

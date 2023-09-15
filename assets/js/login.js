@@ -6,13 +6,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const formSection = document.querySelector(".form-section");
 
     employeeButton.addEventListener("click", () => {
-        slider.style.left = "20%"; // Adjust this value based on your design
+        slider.style.left = "20%"; 
         formSection.style.left = "0";
     });
 
     userButton.addEventListener("click", () => {
-        slider.style.left = "50%"; // Adjust this value based on your design
-        formSection.style.left = "-100%"; // Adjust this value based on your design
+        slider.style.left = "50%"; 
+        formSection.style.left = "-100%"; 
     });
 
     // Dummy user data (replace with actual data)
