@@ -23,9 +23,7 @@ body {
     max-width: 100%; 
 }
 
-.ele {
-    width: 100%;
-    max-width: 100%; 
+
 }
 
 .login-box label {
@@ -101,7 +99,6 @@ body {
 	height: 60px;
 	width: 150px;
 	border-radius: 50px;
-	background-color: #AB7A5F;
 	position: absolute;
 	top: 20px;
 	left: 100px;
@@ -157,7 +154,6 @@ body {
 	height: 60px;
 	width: 150px;
 	border-radius: 50px;
-	background-color: #AB7A5F;
 	font-size: 22px;
 	border: none;
 	cursor: pointer;

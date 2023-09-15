@@ -110,16 +110,16 @@ header {
     color: red; 
 }
 .view-invoice-btn {
-    margin-top: 10px;
+    margin-top: 20px;
     background-color: #b1abab;
     color: #fff;
     border: none;
-    padding: 8px 16px;
-    border-radius: 4px;
+    padding: 12px 24px;
+    border-radius: 6px;
     cursor: pointer;
     transition: background-color 0.3s ease;
     font-family: 'Arial', sans-serif;
-    border-radius: 2%;
+
 }
 
 .view-invoice-btn:hover {
