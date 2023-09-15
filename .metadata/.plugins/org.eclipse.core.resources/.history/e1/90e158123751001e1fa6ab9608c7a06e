@@ -1,0 +1,49 @@
+package com.ecomm.footwear.invoice.models;
+
+import com.ecomm.footwear.invoice.models.product;
+public class Lineitem {
+
+	 private product products;
+	    private int quantity = 1; // Default quantity is 1
+
+	    public Lineitem(product products) {
+	        this.products = products;
+	    }
+
+	    // Getters and setters
+	    
+
+	    public double getTotalPrice() {
+	        return products.getPrice() * quantity;
+	    }
+
+	    public Lineitem() {
+			super();
+		}
+
+		public Lineitem(product products, int quantity) {
+			super();
+			this.products = products;
+			this.quantity = quantity;
+		}
+
+		public product getProducts() {
+			return products;
+		}
+
+		public void setProducts(product products) {
+			this.products = products;
+		}
+
+		public int getQuantity() {
+			return quantity;
+		}
+
+		public void setQuantity(int quantity) {
+			this.quantity = quantity;
+		}
+
+		public double getTotalGST() {
+	        return (products.getPrice() * quantity * products.getGst()) / 100;
+	    }
+}

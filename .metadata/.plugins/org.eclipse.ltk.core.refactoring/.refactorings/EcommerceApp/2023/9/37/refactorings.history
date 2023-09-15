@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy source folder &apos;java&apos; to &apos;EurekaServerdemo&apos;&#x0D;&#x0A;- Original project: &apos;EcommerceApp&apos;&#x0D;&#x0A;- Destination element: &apos;EurekaServerdemo&apos;&#x0D;&#x0A;- Original element: &apos;EcommerceApp/src/main/java&apos;" description="Copy source folder" destination="=EurekaServerdemo" element1="/src\/main\/java" flags="6" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyRoots" roots="1" stamp="1694497248488" version="1.0"/>
+</session>

@@ -1,0 +1,73 @@
+package com.ecomm.footwear.invoice.models;
+
+import java.util.List;
+
+import com.ecomm.footwear.invoice.models.Customer;
+public class InvoiceGeneration  extends Customer,Order,Product {
+
+	 private int invoiceID;
+	    private String invoiceDate;
+	    private Customer customer;
+	    private List<Invoicedetails> invoicedetails;
+	    private double totalGST;
+	    private double totalInvoiceValue;
+	    private String status;
+		public int getInvoiceID() {
+			return invoiceID;
+		}
+		public void setInvoiceID(int invoiceID) {
+			this.invoiceID = invoiceID;
+		}
+		public String getInvoiceDate() {
+			return invoiceDate;
+		}
+		public void setInvoiceDate(String invoiceDate) {
+			this.invoiceDate = invoiceDate;
+		}
+		public Customer getCustomer() {
+			return customer;
+		}
+		public void setCustomer(Customer customer) {
+			this.customer = customer;
+		}
+		public List<Invoicedetails> getLineItems() {
+			return invoicedetails;
+		}
+		public void setLineItems(List<Invoicedetails> invoicedetails) {
+			this.invoicedetails = invoicedetails;
+		}
+		public double getTotalGST() {
+			return totalGST;
+		}
+		public void setTotalGST(double totalGST) {
+			this.totalGST = totalGST;
+		}
+		public double getTotalInvoiceValue() {
+			return totalInvoiceValue;
+		}
+		public void setTotalInvoiceValue(double totalInvoiceValue) {
+			this.totalInvoiceValue = totalInvoiceValue;
+		}
+		public String getStatus() {
+			return status;
+		}
+		public void setStatus(String status) {
+			this.status = status;
+		}
+		public InvoiceGeneration(int invoiceID, String invoiceDate, Customer customer, List<Invoicedetails> invoicedetails,
+				double totalGST, double totalInvoiceValue, String status) {
+			super();
+			this.invoiceID = invoiceID;
+			this.invoiceDate = invoiceDate;
+			this.customer = customer;
+			this.invoicedetails = invoicedetails;
+			this.totalGST = totalGST;
+			this.totalInvoiceValue = totalInvoiceValue;
+			this.status = status;
+		}
+		public InvoiceGeneration() {
+			super();
+		}
+	    
+	    
+}

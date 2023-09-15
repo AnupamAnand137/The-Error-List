@@ -1,0 +1,14 @@
+package com.ecomm.footwear.invoice.BL;
+
+import com.ecomm.footwear.invoice.models.InvoiceGeneration;
+
+public class InvoiceServiceBlImpl implements InvoiceServiceBl{
+
+	@Override
+	public InvoiceGeneration generateInvoice(Order order, Customer customer) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+
+}

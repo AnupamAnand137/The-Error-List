@@ -1,0 +1,31 @@
+package com.ecomm.footwear.invoice.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+import com.ecomm.footwear.invoice.models.Customer;
+import com.ecomm.footwear.invoice.models.Product;
+
+public class InvoiceServiceDaoImpl implements InvoiceServicedao {
+
+	@Override
+	Product product=new Product();
+	public void insertCustomer(Connection connection, Customer customer) throws SQLException {
+		// TODO Auto-generated method stub
+		  String sql = "INSERT INTO products (name, price, gst) VALUES (?, ?, ?)";
+	        try (PreparedStatement statement = connection.prepareStatement(sql)) {
+	            statement.setString(1, product.getName());
+	            statement.setDouble(2, product.getPrice());
+	            statement.setDouble(3, product.getGst());
+	            statement.executeUpdate();
+	        }
+	}
+
+	@Override
+	public void insertProduct(Connection connection, Product product) throws SQLException {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

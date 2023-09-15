@@ -1,0 +1,41 @@
+package com.ecomm.footwear.invoice.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.List;
+
+import com.ecomm.footwear.invoice.models.Customer;
+import com.ecomm.footwear.invoice.models.Invoicedetails;
+import com.ecomm.footwear.invoice.models.Product;
+
+public class InvoiceServiceDaoImpl implements InvoiceServicedao {
+
+	@Override
+	public Customer getCustomerDetails(int customerID, Connection connection) throws SQLException {
+		// TODO Auto-generated method stub Customer customer = null;
+        String sql = "SELECT * FROM customers WHERE customer_id = ?";
+        try (PreparedStatement statement = connection.prepareStatement(sql)) {
+            statement.setInt(1, customerID);
+            ResultSet resultSet = statement.executeQuery();
+            if (resultSet.next()) {
+                customer = new Customer(resultSet.getString("name"),
+                        resultSet.getString("address"),
+                        resultSet.getString("city"));
+            }
+        } catch (SQLException e) {
+            handleSQLException(e);
+        }
+        return customer;
+	}
+
+	@Override
+	public List<Invoicedetails> getProductItems(int orderID, Connection connection) throws SQLException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	
+	
+
+}

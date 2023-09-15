@@ -1,0 +1,23 @@
+package com.ecomm.footwear.invoice.dao;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+
+import com.ecomm.footwear.invoice.models.Customer;
+import com.ecomm.footwear.invoice.models.Product;
+
+public class InvoiceServiceDaoImpl implements InvoiceServicedao {
+
+	@Override
+	public void insertCustomer(Connection connection, Customer customer) throws SQLException {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void insertProduct(Connection connection, Product product) throws SQLException {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

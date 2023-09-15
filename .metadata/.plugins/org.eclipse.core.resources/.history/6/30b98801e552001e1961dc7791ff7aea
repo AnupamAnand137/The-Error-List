@@ -1,0 +1,11 @@
+package com.ecomm.footwear.invoice.dao;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+
+import com.ecomm.footwear.invoice.models.Customer;
+
+public interface InvoiceServicedao {
+
+	 public void insertCustomer(Connection connection, Customer customer) throws SQLException ;
+}

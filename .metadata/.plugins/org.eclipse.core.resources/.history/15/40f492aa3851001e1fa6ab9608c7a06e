@@ -1,0 +1,54 @@
+package com.ecomm.footwear.invoice.views;
+
+import com.ecomm.footwear.invoice.models.Customer;
+import com.ecomm.footwear.invoice.models.InvoiceGeneration;
+import com.ecomm.footwear.invoice.models.Order;
+import com.ecomm.footwear.invoice.models.product;
+import com.ecomm.footwear.invoice.BL.InvoiveServiceBl;
+import com.ecomm.footwear.invoice.BL.InvoiveServiceBlImpl;
+
+public class App {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		  // Create a new order
+        Order order = new Order();
+        order.setOrderID(1);
+        order.setOrderDate("2023-09-11");
+
+        // Add products to the order
+        product product1 = new product("Product A", 100.0, 18.0); // Product name, price, GST
+        product product2 = new product("Product B", 50.0, 12.0);
+        order.addProduct(product1);
+        order.addProduct(product2);
+
+        // Create a customer
+        Customer customer = new Customer("John Doe", "123 Main St", "New York");
+
+        // Create an InvoiceService instance
+        InvoiceServiceBl invoiceService = new InvoiceServiceBLImpl();
+
+        // Generate the invoice
+        InvoiceGeneration invoice = invoiceService.generateInvoice(order, customer);
+
+        // Display the invoice
+        System.out.println("Invoice Details:");
+        System.out.println("---------------");
+        System.out.println("Invoice ID: " + invoice.getInvoiceID());
+        System.out.println("Invoice Date: " + invoice.getInvoiceDate());
+        System.out.println("Customer Name: " + invoice.getCustomer().getName());
+        System.out.println("Customer Address: " + invoice.getCustomer().getAddress());
+        System.out.println("Customer City: " + invoice.getCustomer().getCity());
+        System.out.println("Products:");
+        for (LineItem item : invoice.getLineItems()) {
+            System.out.println(item.getProduct().getName() + " - Quantity: " + item.getQuantity() +
+                    ", Price: $" + item.getTotalPrice());
+        }
+        System.out.println("Total GST Amount: $" + invoice.getTotalGST());
+        System.out.println("Total Invoice Value: $" + invoice.getTotalInvoiceValue());
+        System.out.println("Status: " + invoice.getStatus());
+    }
+	}
+
+}

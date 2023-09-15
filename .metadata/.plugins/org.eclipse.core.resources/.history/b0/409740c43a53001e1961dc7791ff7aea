@@ -1,0 +1,81 @@
+package com.ecom.orderprocessingsystem.views;
+
+import com.ecom.orderprocessingsystem.models.Customer;
+import com.ecom.orderprocessingsystem.models.InvoiceGeneration;
+import com.ecom.orderprocessingsystem.models.Invoicedetails;
+import com.ecom.orderprocessingsystem.models.Order;
+import com.ecom.orderprocessingsystem.models.Product;
+import com.ecom.orderprocessingsystem.Bl.InvoiceServiceBl;
+import com.ecom.orderprocessingsystem.Bl.InvoiceServiceBlImpl;
+
+public class App {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		  // Create a new order
+        Order order = new Order();
+        order.setOrderId(1);
+        order.setOrderDate("2023-09-11");
+
+        // Add products to the order
+        Product product1 = new Product(1011,"Bata Slippers", 100.0, 18.0); // Product id,name, price, GST
+        Product product2 = new Product(1012,"Lou Vuitton", 50.0, 12.0);
+        order.addProduct(product1);
+        order.addProduct(product2);
+
+        // Create a customer
+        Customer customer1 = new Customer(101,"Alia Bhatt", "UP", "lucknow","ala@gmail.com","8292878289",827004);
+        Customer customer2 = new Customer(102,"Kriti", "Mumbai", "Maharashtra","krti@gmail.com","946878269",751024);
+        
+        
+        Product product3 = new Product(1013,"Gucci", 128.0, 7.0); // Product name, price, GST
+        Product product4 = new Product(1014,"Pantanjali", 500.0, 5.0);
+        order.addProduct(product3);
+        order.addProduct(product4);
+        
+        // Create an InvoiceService instance
+        InvoiceServiceBl invoiceService = new InvoiceServiceBlImpl();
+
+        // Generate the invoice
+        InvoiceGeneration invoice = invoiceService.generateInvoice(order, customer1);
+        InvoiceGeneration invoice1 = invoiceService.generateInvoice(order, customer2);
+
+        // Display the invoice
+        System.out.println("Invoice Details:");
+        System.out.println("---------------");
+        System.out.println("Invoice ID: " + invoice.getInvoiceID());
+        System.out.println("Invoice Date: " + invoice.getInvoiceDate());
+        System.out.println("Customer Name: " + invoice.getCustomer().getName());
+        System.out.println("Customer Address: " + invoice.getCustomer().getAddress());
+        System.out.println("Customer City: " + invoice.getCustomer().getCity());
+        System.out.println("Products:");
+        for (Invoicedetails item : invoice.getLineItems()) {
+            System.out.println(item.getProducts().getName() + " - Quantity: " + item.getQuantity() +
+                    ", Price: $" + item.getTotalPrice());
+        }
+        System.out.println("Total GST Amount: $" + invoice.getTotalGST());
+        System.out.println("Total Invoice Value: $" + invoice.getTotalInvoiceValue());
+        System.out.println("Status: " + invoice.getStatus());
+    
+	// Display the invoice
+    System.out.println("Invoice Details:");
+    System.out.println("---------------");
+    System.out.println("Invoice ID: " + invoice1.getInvoiceID());
+    System.out.println("Invoice Date: " + invoice1.getInvoiceDate());
+    System.out.println("Customer Name: " + invoice1.getCustomer().getName());
+    System.out.println("Customer Address: " + invoice1.getCustomer().getAddress());
+    System.out.println("Customer City: " + invoice1.getCustomer().getCity());
+    System.out.println("Products:");
+    for (Invoicedetails item : invoice1.getLineItems()) {
+        System.out.println(item.getProducts().getName() + " - Quantity: " + item.getQuantity() +
+                ", Price: $" + item.getTotalPrice());
+    }
+    System.out.println("Total GST Amount: $" + invoice1.getTotalGST());
+    System.out.println("Total Invoice Value: $" + invoice1.getTotalInvoiceValue());
+    System.out.println("Status: " + invoice1.getStatus());
+}
+	}
+
+
+

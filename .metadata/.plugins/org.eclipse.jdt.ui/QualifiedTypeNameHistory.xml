@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="com.product.models.ProductStore"/>
+    <fullyQualifiedTypeName name="com.product.exceptions.ProductAlreadyExistsException"/>
+    <fullyQualifiedTypeName name="com.product.exceptions.ProductNotFoundException"/>
+    <fullyQualifiedTypeName name="java.sql.SQLException"/>
+    <fullyQualifiedTypeName name="java.util.Date"/>
+    <fullyQualifiedTypeName name="com.training.models.Employee"/>
+    <fullyQualifiedTypeName name="com.training.models.SkillTraining"/>
+    <fullyQualifiedTypeName name="java.util.Map"/>
+    <fullyQualifiedTypeName name="java.util.HashMap"/>
+    <fullyQualifiedTypeName name="com.training.models.TrainingSystem"/>
+    <fullyQualifiedTypeName name="com.training.exceptions.EmployeeAlreadyExistsException"/>
+    <fullyQualifiedTypeName name="com.training.exceptions.TrainingAlreadyExistsException"/>
+    <fullyQualifiedTypeName name="com.training.exceptions.TrainingNotFoundException"/>
+    <fullyQualifiedTypeName name="javax.servlet.ServletContext"/>
+    <fullyQualifiedTypeName name="java.util.Enumeration"/>
+    <fullyQualifiedTypeName name="java.io.PrintWriter"/>
+    <fullyQualifiedTypeName name="javax.servlet.http.HttpServletResponse"/>
+    <fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
+    <fullyQualifiedTypeName name="org.apache.tomcat.util.json.JSONParser"/>
+    <fullyQualifiedTypeName name="com.aws.models.Employee"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.net.http.HttpClient"/>
+    <fullyQualifiedTypeName name="com.ecomm.footwear.invoice.models.Order"/>
+    <fullyQualifiedTypeName name="com.ecomm.footwear.invoice.models.product"/>
+    <fullyQualifiedTypeName name="com.ecomm.footwear.invoice.models.Customer"/>
+    <fullyQualifiedTypeName name="com.ecomm.footwear.invoice.models.InvoiceGeneration"/>
+    <fullyQualifiedTypeName name="com.ecomm.footwear.invoice.dao.LineItem"/>
+</qualifiedTypeNameHistroy>

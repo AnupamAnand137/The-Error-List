@@ -1,0 +1,12 @@
+package com.ecomm.footwear.invoice.BL;
+
+import com.ecomm.footwear.invoice.models.InvoiceGeneration;
+import com.ecomm.footwear.invoice.models.Customer;
+import com.ecomm.footwear.invoice.models.Order;
+
+public interface InvoiceServiceBl {
+
+	public InvoiceGeneration generateInvoice(Order order, Customer customer);
+	
+	
+}

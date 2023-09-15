@@ -1,0 +1,53 @@
+package com.ecomm.footwear.invoice.models;
+import java.util.ArrayList;
+import java.util.List;
+public class Order {
+
+	private int orderID;
+    private String orderDate;
+    private List<Invoicedetails> invoicedetails = new ArrayList<>();
+
+    // Getters and setters
+    
+
+    public void addProduct(Product Product) {
+        Invoicedetails item = new Invoicedetails(Product);
+        invoicedetails.add(item);
+    }
+
+    public Order() {
+		super();
+	}
+
+	public Order(int orderID, String orderDate, List<Invoicedetails> invoicedetails) {
+		super();
+		this.orderID = orderID;
+		this.orderDate = orderDate;
+		this.invoicedetails = invoicedetails;
+	}
+
+	public int getOrderID() {
+		return orderID;
+	}
+
+	public void setOrderID(int orderID) {
+		this.orderID = orderID;
+	}
+
+	public String getOrderDate() {
+		return orderDate;
+	}
+
+	public void setOrderDate(String orderDate) {
+		this.orderDate = orderDate;
+	}
+
+	public void setLineItems(List<Invoicedetails> invoicedetails) {
+		this.invoicedetails = invoicedetails;
+	}
+
+	public List<Invoicedetails> getLineItems() {
+        return invoicedetails;
+    }
+
+}

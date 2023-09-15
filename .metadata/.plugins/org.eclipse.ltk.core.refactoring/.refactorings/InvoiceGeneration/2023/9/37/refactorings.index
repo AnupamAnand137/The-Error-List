@@ -1,0 +1,20 @@
+1694445743065	Rename package 'com.ecomm.footwear.invoice'
+1694445790607	Delete element
+1694445801330	Rename package 'com.ecomm.footwear.invoice.BLImpl'
+1694489215519	Rename type 'invoiceGeneration'
+1694499112492	Move compilation unit
+1694500746816	Move compilation unit
+1694500897278	Rename type 'Lineitem'
+1694500938085	Rename type 'customer'
+1694500973695	Rename type 'order'
+1694673670380	Rename type 'LineItem'
+1694684831286	Rename type 'Invoicedetailsdao'
+1694684847351	Move compilation unit
+1694685350407	Rename type 'product'
+1694712161262	Rename package 'com.ecomm.footwear.invoice.models'
+1694712226121	Rename package 'com.ecomm.footwear.invoice.BL'
+1694712246150	Rename package 'com.ecomm.footwear.invoice.dao'
+1694712281679	Rename package 'com.ecomm.footwear.invoice.exceptions'
+1694712331528	Rename package 'com.ecomm.footwear.invoice.views'
+1694723946444	Delete element
+1694743916448	Delete element

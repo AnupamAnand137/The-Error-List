@@ -1,0 +1,55 @@
+package com.ecomm.footwear.invoice.models;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.ecomm.footwear.invoice.dao.Invoicedetailsdao;
+public class Order {
+
+	private int orderID;
+    private String orderDate;
+    private List<Invoicedetailsdao> invoicedetailsdaos = new ArrayList<>();
+
+    // Getters and setters
+    
+
+    public void addProduct(product product) {
+        Invoicedetailsdao item = new Invoicedetailsdao(product);
+        invoicedetailsdaos.add(item);
+    }
+
+    public Order() {
+		super();
+	}
+
+	public Order(int orderID, String orderDate, List<Invoicedetailsdao> invoicedetailsdaos) {
+		super();
+		this.orderID = orderID;
+		this.orderDate = orderDate;
+		this.invoicedetailsdaos = invoicedetailsdaos;
+	}
+
+	public int getOrderID() {
+		return orderID;
+	}
+
+	public void setOrderID(int orderID) {
+		this.orderID = orderID;
+	}
+
+	public String getOrderDate() {
+		return orderDate;
+	}
+
+	public void setOrderDate(String orderDate) {
+		this.orderDate = orderDate;
+	}
+
+	public void setLineItems(List<Invoicedetailsdao> invoicedetailsdaos) {
+		this.invoicedetailsdaos = invoicedetailsdaos;
+	}
+
+	public List<Invoicedetailsdao> getLineItems() {
+        return invoicedetailsdaos;
+    }
+
+}

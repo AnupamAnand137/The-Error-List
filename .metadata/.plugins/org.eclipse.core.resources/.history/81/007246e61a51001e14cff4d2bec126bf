@@ -1,0 +1,15 @@
+package com.ecomm.footwear.invoice.models;
+
+import java.util.List;
+
+import com.ecomm.footwear.invoice.models.Customer;
+public class invoiceGeneration {
+
+	 private int invoiceID;
+	    private String invoiceDate;
+	    private Customer customer;
+	    private List<LineItem> lineItems;
+	    private double totalGST;
+	    private double totalInvoiceValue;
+	    private String status;
+}

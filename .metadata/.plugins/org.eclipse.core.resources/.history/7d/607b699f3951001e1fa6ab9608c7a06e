@@ -1,0 +1,38 @@
+package com.ecomm.footwear.invoice.BL;
+
+import com.ecomm.footwear.invoice.dao.LineItem;
+import com.ecomm.footwear.invoice.models.Customer;
+import com.ecomm.footwear.invoice.models.InvoiceGeneration;
+import com.ecomm.footwear.invoice.models.Order;
+
+public class InvoiceServiceBlImpl implements InvoiceServiceBl{
+
+	@Override
+	public InvoiceGeneration generateInvoice(Order order, Customer customer) {
+		// TODO Auto-generated method stub
+		InvoiceGeneration invoice = new InvoiceGeneration();
+        invoice.setInvoiceID(order.getOrderID());
+        invoice.setInvoiceDate(order.getOrderDate());
+        invoice.setCustomer(customer);
+        invoice.setLineItems(order.getLineItems());
+
+        // Calculate total GST and invoice value
+        double totalGST = 0.0;
+        double totalInvoiceValue = 0.0;
+        for (LineItem item : invoice.getLineItems()) {
+            totalGST += item.getTotalGST();
+            totalInvoiceValue += item.getTotalPrice();
+        }
+
+        invoice.setTotalGST(totalGST);
+        invoice.setTotalInvoiceValue(totalInvoiceValue);
+
+        // Set the status
+        invoice.setStatus("Unpaid");
+
+        return invoice;
+    }
+	}
+	
+
+}

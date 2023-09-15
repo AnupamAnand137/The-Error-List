@@ -1,0 +1,97 @@
+package com.ecom.orderprocessingsystem.models;
+
+public class Product {
+
+//	 private String name;
+//	    private double price;
+//	    private double gst;
+//		public String getName() {
+//			return name;
+//		}
+//		public void setName(String name) {
+//			this.name = name;
+//		}
+//		public double getPrice() {
+//			return price;
+//		}
+//		public void setPrice(double price) {
+//			this.price = price;
+//		}
+//		public double getGst() {
+//			return gst;
+//		}
+//		public void setGst(double gst) {
+//			this.gst = gst;
+//		}
+//		public Product(String name, double price, double gst) {
+//			super();
+//			this.name = name;
+//			this.price = price;
+//			this.gst = gst;
+//		}
+//		public Product() {
+//			super();
+//		}
+//		@Override
+//		public String toString() {
+//			return "Product [name=" + name + ", price=" + price + ", gst=" + gst + ", getName()=" + getName()
+//					+ ", getPrice()=" + getPrice() + ", getGst()=" + getGst() + ", getClass()=" + getClass()
+//					+ ", hashCode()=" + hashCode() + ", toString()=" + super.toString() + "]";
+//		}
+//		
+
+	private long id;
+	private String name;
+	private double price;
+	 private double gst;
+	private ProductCategory category;
+	public Product() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public Product(long id, String name, double price, ProductCategory category,double gst) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.price = price;
+		this.category = category;
+		this.gst = gst;
+	}
+	public long getId() {
+		return id;
+	}
+	public void setId(long id) {
+		this.id = id;
+	}
+	public double getGst() {
+	  return gst;
+	}
+	public void setGst(double gst) {
+		this.gst = gst;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public double getPrice() {
+		return price;
+	}
+	public void setPrice(double price) {
+		this.price = price;
+	}
+	public ProductCategory getCategory() {
+		return category;
+	}
+	public void setCategory(ProductCategory category) {
+		this.category = category;
+	}
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return "Product[ ID:"+id+", Name:"+name+", Price:"+price+", Category:"+category+"]";
+	}
+	
+	    
+}

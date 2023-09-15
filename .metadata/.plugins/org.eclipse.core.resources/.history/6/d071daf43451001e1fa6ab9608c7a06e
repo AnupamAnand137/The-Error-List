@@ -1,0 +1,20 @@
+package com.ecomm.footwear.invoice.models;
+
+public class order {
+
+	private int orderID;
+    private String orderDate;
+    private List<LineItem> lineItems = new ArrayList<>();
+
+    // Getters and setters
+
+    public void addProduct(Product product) {
+        LineItem item = new LineItem(product);
+        lineItems.add(item);
+    }
+
+    public List<LineItem> getLineItems() {
+        return lineItems;
+    }
+
+}

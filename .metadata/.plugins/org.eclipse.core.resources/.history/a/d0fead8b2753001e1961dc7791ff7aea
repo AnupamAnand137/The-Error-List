@@ -1,0 +1,43 @@
+package com.ecom.orderprocessingsystem.models;
+
+public class Product {
+
+	 private String name;
+	    private double price;
+	    private double gst;
+		public String getName() {
+			return name;
+		}
+		public void setName(String name) {
+			this.name = name;
+		}
+		public double getPrice() {
+			return price;
+		}
+		public void setPrice(double price) {
+			this.price = price;
+		}
+		public double getGst() {
+			return gst;
+		}
+		public void setGst(double gst) {
+			this.gst = gst;
+		}
+		public Product(String name, double price, double gst) {
+			super();
+			this.name = name;
+			this.price = price;
+			this.gst = gst;
+		}
+		public Product() {
+			super();
+		}
+		@Override
+		public String toString() {
+			return "Product [name=" + name + ", price=" + price + ", gst=" + gst + ", getName()=" + getName()
+					+ ", getPrice()=" + getPrice() + ", getGst()=" + getGst() + ", getClass()=" + getClass()
+					+ ", hashCode()=" + hashCode() + ", toString()=" + super.toString() + "]";
+		}
+		
+	    
+}
